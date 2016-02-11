@@ -12,13 +12,22 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // We are not taking user input in this excercise
-        int userTemperature = 98;
-        
-        // Use if-else logic to print out the correct response:
-        
-        NSLog(@"You're running a bit cool.");
-        NSLog(@"You've got the fever... THE OBJECTIVE-C FEVER.");
-        NSLog(@"You'll be alright kid.");
+        float userTemperature = 98.59;
+        //
+        // rounding to nearest 100th
+        userTemperature = userTemperature*100.0;
+        int roundedTemp = (int)userTemperature;
+        //
+        // checking temperature
+        if (roundedTemp > 9860) {
+            NSLog(@"You've got the fever... THE OBJECTIVE-C FEVER.");
+        }
+        else if (roundedTemp == 9860) {
+            NSLog(@"You'll be alright kid.");
+        }
+        else {
+            NSLog(@"You're running a bit cool.");
+        }
     
     }
     return 0;

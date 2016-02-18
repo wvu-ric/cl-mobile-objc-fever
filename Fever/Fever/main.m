@@ -15,11 +15,14 @@ int main(int argc, const char * argv[]) {
         int userTemperature = 98;
         
         // Use if-else logic to print out the correct response:
+        if (userTemperature < 96) {
+            NSLog(@"You're running a bit cool.");
+        } else if (userTemperature > 100) {
+            NSLog(@"You've got the fever... THE OBJECTIVE-C FEVER.");
+        } else {
+            NSLog(@"You'll be alright kid.");
+        }
         
-        NSLog(@"You're running a bit cool.");
-        NSLog(@"You've got the fever... THE OBJECTIVE-C FEVER.");
-        NSLog(@"You'll be alright kid.");
-    
     }
     return 0;
 }
